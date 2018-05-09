@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.bootcss.com/Swiper/4.2.2/css/swiper.css" rel="stylesheet">
+    <!-- <script src="https://cdn.bootcss.com/Swiper/4.2.2/js/swiper.min.js"></script> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="renderer" content="webkit"/>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script>
+
+    function tipOfIE8() {
+      var DEFAULT_VERSION = 8.0
+      var ua = navigator.userAgent.toLowerCase()
+      var isIE = ua.indexOf("msie") > -1
+      var safariVersion
+      if (isIE) {
+        safariVersion = ua.match(/msie ([\d.]+)/)[1]
+      }
+      if (safariVersion <= DEFAULT_VERSION) {
+        // 进行你所要的操作
+        var appStyle = document.getElementById('app').style
+        document.body.style.margin = '0'
+        document.body.style.padding = '0'
+        appStyle.background = '#2ea7e0'
+        appStyle.color = '#fff'
+        appStyle.fontSize = '12px'
+        appStyle.padding = '10px 0'
+        appStyle.textAlign = 'center'
+        appStyle.font = '12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif'
+        
+        app.innerHTML = '您所使用的浏览器是十年前的浏览器，为了保护你的账号安全，沃淘已不支持该浏览器及以下版本浏览器访问，为了更好的用户体验，建议你升级到IE最新版本浏览器，或使用Chrome,QQ,360等其他浏览器 <a href="http://down.360safe.com/cse/360cse_9.5.0.128.exe">360急速浏览器</a> <a href="http://sw.bos.baidu.com/sw-search-sp/software/343173424f6cc/QQBrowser_Setup_10.0.941.400.exe">QQ浏览器</a>'
+      };
+    }
+    //ie以下的提示信息
+    tipOfIE8()
+</script>
