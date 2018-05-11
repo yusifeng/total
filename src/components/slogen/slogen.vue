@@ -27,7 +27,7 @@ export default {
       margin-bottom 15px
     p
       font-size $slogen-subtitle-hanzi-size
-      color $color-advantage-four-color
+      color $666666
       font-weight 600
       margin-bottom 13px
       span

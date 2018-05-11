@@ -1,11 +1,13 @@
 <template>
   <div class="four-advantages-wrapper">
     <series-row-item :list="fourAdvantageList" @click="selectItem" ></series-row-item>
+
     <div class="keep-bgcolor">
       <transition name="choose-advantage" mode="out-in">
         <component :is="currentComponent" :color="1"></component>
       </transition>
     </div>
+    
   </div>
 </template>
 
@@ -75,6 +77,7 @@ export default {
     .keep-bgcolor
       width 100%
       background-color $color-advantage-background
+      height 300px
       .choose-advantage-enter-active, .choose-advantage-leave-active
         transition all .3s
       .choose-advantage-enter, .choose-advantage-leave-to

@@ -44,6 +44,7 @@ export default {
     margin 0 auto
     color $color-common-theme-sub-color
     transition all .3s ease-in-out
+    font-size 20px
     &:hover
       border 1px solid $color-common-theme-sub-color
       color $color-common-theme-sub-color

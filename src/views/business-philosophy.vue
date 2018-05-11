@@ -1,25 +1,22 @@
 <template>
   <div class="inc-precess-wrapper">
-    <single-slide class="single-slide" :bannerMsg="bannerMsg">
-      <div class="slogen3-wrapper">
-        <span class="c">C</span>
-        <span class="pls">+</span>
-        <span class="gslc">经营理念</span>
-        <span class="ompany">ompany</span>
-        <span class="history">history</span>
-      </div>
-    </single-slide>
-      <div class="container">
-        <div class="item" v-for="(item, index) in dataList">
-          <div class="title-wrapper">
-            <h3 class="title">{{item.title}}</h3>
-            <span class="pxsbx"></span>
-            <span class="pxsbx"></span>
-            <span class="pxsbx"></span>
-          </div>
-          <div class="content">{{item.content}}</div>
+
+    <single-slide class="single-slide" :bannerMsg="bannerMsg"></single-slide>
+
+    <div class="container">
+      <div class="item" v-for="(item, index) in dataList">
+
+        <div class="title-wrapper">
+          <h3 class="title">{{item.title}}</h3>
+          <span class="pxsbx"></span>
+          <span class="pxsbx"></span>
+          <span class="pxsbx"></span>
         </div>
+
+        <div class="content">{{item.content}}</div>
+        
       </div>
+    </div>
 
   </div>
 </template>
@@ -27,6 +24,7 @@
 <script>
 import SingleSlide from 'base/single-slide/single-slide'
 import SeriesRowItem from 'base/series-row-item/series-row-item'
+import { businessPhilosophy } from 'common/js/slide-position'
 export default {
   data() {
     return {
@@ -48,24 +46,7 @@ export default {
           content: '沃淘信科Wotall准确把握自身优势，拒绝过度横向扩展。一直以来，有且只有一项主营业务：短信群发业务。正因为近乎于苛刻的专一，才赢得过去5年满意的答卷。我们十分坚定，下一个五年，我们仍然会专注于短信群发业务及由此衍生的数据深度分析，不会轻易横向扩展。'
         }
       ],
-      bannerMsg: {
-        bgImg: 'bs-ph-bg',
-        leftImgPosition: {
-          isShow: true,
-          textImg: 'bs-pg-l',
-          style: {
-            width: '17vw',
-            top: '25%',
-            left: '13%'
-          }
-        },
-        rightImgPosition: {
-          isShow: false
-        },
-        midImgPosition: {
-          isShow: false
-        }
-      }
+      bannerMsg: businessPhilosophy
     }
   },
   components: {

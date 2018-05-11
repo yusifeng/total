@@ -16,7 +16,7 @@
 <style lang="stylus" scoped>
   @import '~common/stylus/variable'
   .desc-background
-    width 100%
+    width 100vw
     height 410px
     .container
       padding-top 60px

@@ -13,9 +13,9 @@ export default new Router({
   mode: 'history',
   routes,
   scrollBehavior(to, from, savedPosition) {
-    console.log(this)
+    // console.log(this)
     if (to.params.needScroll) {
-      console.log()
+      // console.log()
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve({ x: 0, y: 1300 })

@@ -1,15 +1,13 @@
 <template>
   <div class="color-templet-wrapper clearfix">
-    <div class="one-color" v-for="(val,key, index) in colors" :style="{'background-color':val}">
-      {{key}}
-      <!-- <input type="text" :value="val"> -->
-      <input type="text" :value="key">
-    </div>
+    <Map></Map>
   </div>
 </template>
 
 <script>
+import Map from 'components/map/map'
 export default {
+  
   data() {
     return {
       colors: {
@@ -31,34 +29,16 @@ export default {
 
       }
     }
+  },
+  components: {
+    Map
+  },
+  mounted() {
+    // console.log(Map)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .color-templet-wrapper
-    padding-top 100px
-  .one-color
-    position relative
-    float left
-    margin-top 50px
-    width 200px
-    height 200px
-    border-radius 20px
-    // border 1px solid #000
-    font-size 22px
-    text-align center
-    line-height 30px
-    border 1px solid #000
-    color purple
-    overflow hidden
-    margin-right 20px
-    input
-      display block
-      position absolute
-      bottom 0
-      left 0
-      text-indent 10px
-      font-size 12px
-      width 100%
+
 </style>

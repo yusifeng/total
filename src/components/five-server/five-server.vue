@@ -1,10 +1,14 @@
 <template>
   <div class="five-server-wrapper">
+
     <series-row-item :list="copyList" @click="selectItem" ></series-row-item>
+
     <div class="shadow-box"></div>
+
     <transition-group name="david">
       <div class="desc-background" v-for="(item, index) in fiveDescriptionList" :class="{active: index === currentIndex}" :key="item.title">
         <div class="container">
+
           <h3 class="title">{{item.title}}</h3>
           <span class="title-en">{{item.titleEn}}</span>
           <span class="line">/</span>
@@ -14,8 +18,10 @@
             <img :src="item.imgSrc">
           </div>
         </div>
+        
       </div>
     </transition-group>
+
   </div>
 </template>
 
@@ -32,7 +38,7 @@ export default {
           subTitle: '',
           titleEn: 'SMS platform',
           imgSrc: require('./server1.png'),
-          content: '上海沃淘信息科技有限公司，成立于2013年，注册资金1亿元。沃淘信科Wotall立足于上海、辐射全国，总员工数超过150人，年销售额逾亿元。在全国设有华东、华南、华西、华北、华中五大服务中心。“用品质赢得信赖、用真心赢得信任”，沃淘信科Wotall正在为超过10000家的客户提供优质产品、良好服务。'
+          content: '我淘可针对用户的安全性需求, 进行短信平台的一对一专案部署。并可针对客户现有环境,进行快速对接'
         },
         {
           icon: 'icon-youjian',
@@ -40,7 +46,7 @@ export default {
           subTitle: '',
           titleEn: 'SMS bulk',
           imgSrc: require('./server3.png'),
-          content: '除生产类短信外，上海沃淘信息科技有限公司的数据营销通道一直是行业翘楚，是全国数十家短信公司的通道供应商，其中包括行业内知名度较高的上市公司。'
+          content: '沃淘现提供国内验证码,国际验证码,会员营销,市场推广短信等各项sms短信业务.'
         },
         {
           icon: 'icon-tousujianyi',
@@ -56,7 +62,7 @@ export default {
           subTitle: '【号码+通道】',
           titleEn: 'Number service',
           imgSrc: require('./server4.png'),
-          content: '上海沃淘信息科技有限公司主要侧重于金融行业和互联行业的营销短信通道支持。直接和间接服务的客户包括但不限于万达金融、百度金融、小米金融、借贷宝、支付宝、淘宝、省呗、借呗、还呗、借了么、借钱花、2345金融等。在互联网金融最火热的16年和17年，沃淘信科直接服务的互联网金融公司超过500家。'
+          content: '针对重点客户,沃淘可提供专属号码申请,专属通道落地业务.让短信码号成为身份标识,让信赖加倍.'
 
         },
         {
@@ -65,7 +71,7 @@ export default {
           subTitle: '【基于效果】',
           titleEn: 'Data report',
           imgSrc: require('./server5.png'),
-          content: '上海沃淘信息科技有限公司，在第一个五年计划的尾页，将大力夯实惟一主业，专注于“精耕细作”，努力在一公尺宽的客户需求边界里，为客户挖掘一公里深的市场价值。上海沃淘信息科技有限公司一直信奉“帮客户赚钱才是为客户省钱”的伙伴价值，与客户共同相伴成长。'
+          content: '沃淘可依据客户需求,协同客户进行短信发送效果预判,统计,评估,让短信有的放矢并借于云计算分析,给出投放建议报告.'
         }
       ],
       currentIndex: 0
@@ -118,8 +124,8 @@ export default {
           margin-bottom 15px
         .line
           position absolute
-          left 368px
-          top 26px
+          left 365px
+          top 29px
           font-size $mode-skewline-size
           height 32px
         .title-en

@@ -1,5 +1,6 @@
 <template>
   <div class="performance-result-wrapper">
+    
     <single-slide class="single-slide" :bannerMsg="bannerMsg">
       <ul class="single-slide-content">
         <li><span class="tri-angle"></span>上海我淘信息科技有限公司,自2013年成立以来,得益于广大客户和合作伙伴的支持,一直保持的超高速的跨越式发展.</li>
@@ -96,8 +97,8 @@ export default {
         font-size $single-performance-results-size
         color $ffffff
         line-height 1.8
-        top 140px
-        left 520px
+        top 38%
+        left 47%
         width 360px
         letter-spacing 1px
         li

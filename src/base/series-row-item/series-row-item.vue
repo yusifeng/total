@@ -78,12 +78,15 @@ export default {
         font-size $series-title-size
         text-align center
         color $color-advantage-four-color
+        margin-top 20px
+        margin-bottom 20px
         .click-area
           margin 0 auto
           width 120px
           height 100px  
           cursor pointer
           transition color 300ms
+          color $666666
           .icon
             width 40px
             height 40px

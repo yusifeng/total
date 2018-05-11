@@ -1,7 +1,7 @@
 <template>
   <div class="single-slide-wrapper">
       <img :src="bannerMsg.bgImg && require(`./${bannerMsg.bgImg}.png`)" width="100%" class="bg">
-      <div class="container">
+      <!-- <div class="container"> -->
         <!-- 对于不带字的图标, 可只是用一个img标签即可, 因为没有文字或者文字位置与img的大小没有任何关系 -->
         <img 
              v-show="bannerMsg.leftImgPosition.isShow && !bannerMsg.leftImgPosition.withWord"
@@ -31,7 +31,7 @@
              class="mid">
              {{bannerMsg.midImgPosition}} -->
         <slot name="default"></slot>
-      </div>
+      <!-- </div> -->
   </div>
 </template>
 
@@ -41,13 +41,6 @@ export default {
     bannerMsg: {
       type: Object,
       default: {}
-    }
-  },
-  mounted() {
-  },
-  data() {
-    return {
-      banner: ''
     }
   }
 }
@@ -61,32 +54,24 @@ export default {
     font-size 0
     position relative
     width 100%
-    .bg-left
-      position absolute
-      top 0
-      left 0
+    // .container
+    //   position absolute
+    //   top 0
+    //   left 50%
+    //   margin-left -600px
+    //   background-color red
+    //   z-index 100
+    .img-with-word
       height 100%
-    .bg-right
-      position absolute
-      top 0
-      right 0
-      height 100%
-    .container
-      position absolute
-      top 0
-      left 50%
-      margin-left -600px
-      .img-with-word
-        height 100%
-        position relative
-        .word
-          position absolute
-          top 0
-          left 0
+      position relative
+      img
+        margin-bottom 10px
+      .word
+        position absolute
+        top 0
+        left 0
     .left
       position absolute
-    .right
-      position absolute
-    .mid
+    .right.img-with-word
       position absolute
 </style>

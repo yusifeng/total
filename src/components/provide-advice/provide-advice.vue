@@ -16,7 +16,8 @@
                 type="text"
                 class="detail-phone-tel"
                 maxlength="11"></wt-input>
-      <wt-button value="免费咨询" @click="counseling"></wt-button>
+      <div class="detail-phone-btn"><i class="iconfont icon-dianhua"></i> 点击此处 免费咨询</div>
+      <!-- <wt-button value="免费咨询" @click="counseling"></wt-button> -->
       <p class="detail-phone-desc">输入号码后点击免费通话, 稍后您将接到我们的电话, 该通话对您完全免费, 请放心接听！</p>
     </div>
     <!-- on-touch-messageBoader-detail --> 
@@ -67,15 +68,27 @@ export default {
   },
   methods: {
     showDetail1(e) {
+      if(!this.timer) {
+        return 
+      }
+      clearTimeout(this.timer)
       addClass(this.$refs.detailPhone, 'active')
     },
     showDetail3(e) {
+      if(!this.timer) {
+        return 
+      }
+      clearTimeout(this.timer)
       addClass(this.$refs.detailAdvice, 'active')
     },
 
     closeDetail() {
-        removeClass(this.$refs.detailPhone, 'active')
-        removeClass(this.$refs.detailAdvice, 'active')
+        this.timer = null
+        this.timer = setTimeout(() => {
+          removeClass(this.$refs.detailAdvice, 'active')
+          removeClass(this.$refs.detailPhone, 'active')
+          clearTimeout(this.timer)
+        }, 500);
     },
     insureNum() {
       this.value=this.value.replace(/[^\d]/g,'')
@@ -83,12 +96,12 @@ export default {
     counseling() {  //咨询
       //发送ajax验证
       //...
-      alert('')
+      alert('功能维护中')
     },
     sendMessage() {
       //发送ajax验证
       //...
-      alert('')
+      alert('功能维护中')
     }
   },
   components: {
@@ -132,6 +145,16 @@ export default {
       box-sizing border-box
       .detail-phone-tel
         margin-bottom 10px
+      .detail-phone-btn
+        width 100%
+        background-color $color-btn
+        height 40px
+        font-size $provide-advice-icon-size
+        text-align center
+        line-height 40px
+        color $color-common-theme-sub-color
+        .icon-dianhua
+          font-size $provide-advice-btn-icon-size
       .detail-phone-desc
         margin-top 20px
         color $ffffff
@@ -157,7 +180,7 @@ export default {
       .detail-advice-tel
         margin-bottom 10px
     .active
-      display none
+      // display none
       display block
 </style>
 

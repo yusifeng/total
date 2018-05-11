@@ -1,6 +1,6 @@
 // 对于left的情况是不包含一个wrapper
 // 对于right的情况是包含一个wrapper, 包含了wrapper就是有对应的文字与之有对应的关系, 如果不用一个wrapper包裹, 无法展示对应关系
-// export default {
+
 //产品与服务
 export const productServer = {
 
@@ -10,14 +10,15 @@ export const productServer = {
     textImg: 'pr-se-l',
     style: {
       width: '17vw',
-      top: '100px',
-      left: '100px',
+      top: '23%',
+      left: '18%',
     }
   },
   rightImgPosition: {
     isShow: false
   },
 }
+//业绩成果
 export const performanceResults = {
 
   bgImg: 'ou-ac-bg',
@@ -25,21 +26,16 @@ export const performanceResults = {
     isShow: true,
     textImg: 'ou-ac-l',
     style: {
-      width: '45vw',
+      width: '48vw',
       bottom: '0px',
-      left: '80px',
+      left: '21%',
     }
   },
   rightImgPosition: {
-    isShow: true,
-    textImg: 'ou-ac-r',
-    style: {
-      width: '400px',
-      top: '50px',
-      left: '850px',
-    }
+    isShow: false
   }
 }
+//样板客户
 export const cooperativeClient = {
 
   bgImg: 'co-qu-bg',
@@ -48,14 +44,16 @@ export const cooperativeClient = {
     textImg: 'co-qu-l',
     style: {
       width: '17vw',
-      top: '95px',
-      left: '233px'
+      top: '23%',
+      left: '29%'
     }
   },
   rightImgPosition: {
     isShow: false
   }
 }
+
+//经营理念
 export const businessPhilosophy = {
 
   bgImg: 'bs-ph-bg',
@@ -65,13 +63,32 @@ export const businessPhilosophy = {
     style: {
       width: '17vw',
       top: '25%',
-      left: '13%'
+      left: '27%'
     }
   },
   rightImgPosition: {
     isShow: false
   }
 }
+
+//公司进程
+export const incPrecess = {
+  bgImg: 'co-ov-bg',
+  leftImgPosition: {
+    isShow: true,
+    textImg: 'co-ov-l',
+    style: {
+      width: '17vw',
+      top: '29%',
+      left: '30%',
+    }
+  },
+  rightImgPosition: {
+    isShow: false,
+  }
+}
+
+//未来展望
 export const furtureProspects = {
 
   bgImg: 'fu-pr-bg',
@@ -84,24 +101,8 @@ export const furtureProspects = {
     textImg: 'fu-pr-l',
     style: {
       width: '17vw',
-      top: '200px',
-      left: '470px',
+      top: '33%',
+      left: '43%',
     }
-  } 
-}
-
-export const incPrecess = {
-  bgImg: 'co-ov-bg',
-  leftImgPosition: {
-    isShow: 'true',
-    textImg: 'co-ov-l',
-    style: {
-      width: '17vw',
-      top: '86px',
-      left: '276px',
-    }
-  },
-  midImgPosition: {
-    isShow: false,
   }
 }

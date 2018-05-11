@@ -1,7 +1,8 @@
 <template>
   <div id="app" name="app">
     <div class="bar-wrapper">
-      <h1 class="logo"><router-link :to="{name: 'index'}"><img src="./common/imgs/logo.png" class="img"></router-link></h1>
+      <!-- <h1 class="logo"><router-link :to="{name: 'index'}"><img src="./common/imgs/logo.png" class="img"></router-link></h1> -->
+      <h1 class="logo"><router-link :to="{name: 'index'}" class="logo-icon">沃淘科技</router-link></h1>
         <ul class="bar-nav-left">
           <li><router-link :to="{name: 'prod-server'}">产品与服务</router-link><span></span></li>
           <li><router-link :to="{name: 'performance-results'}">业绩成果</router-link><span></span></li>
@@ -13,14 +14,15 @@
           <li><router-link :to="{name: 'contact-us'}">联系我们</router-link><span></span></li>
 
         </ul>
-        <ul class="bar-nav-right">
+        <!-- <ul class="bar-nav-right">
           <li><a href="/#/">新用户注册</a></li>
           <li><a href="/#/">登 录</a></li>
-        </ul>
+        </ul> -->
     </div>
 
-    
-    <router-view></router-view>
+    <!-- <keep-alive> -->
+      <router-view></router-view>
+    <!-- </keep-alive> -->
 
 
     <!-- 版权相关 -->
@@ -31,7 +33,6 @@
 
     <!-- 提供建议 -->
     <provide-advice class="provide-advice"></provide-advice>
-    <!-- <slogen></slogen> -->
   </div>
 </template>
 
@@ -39,7 +40,6 @@
   import ToTop from 'base/to-top/to-top'
   import CommonFooter from 'components/common-footer/common-footer'
   import ProvideAdvice from 'components/provide-advice/provide-advice'
-  // import Slogen from 'components/slogen/slogen'
   export default {
     head: {
       title: {
@@ -59,7 +59,6 @@
       CommonFooter,
       ToTop,
       ProvideAdvice,
-      // Slogen
     }
   }
 </script>
@@ -83,6 +82,12 @@
           display inline-block
           width 100%
           height 100%
+          width 123px
+          background-image url(./common/imgs/logo.png)
+          background-repeat no-repeat
+          text-indent -5000px
+          background-position 0 10px
+          background-size 123px 41px
           .img
             margin-top 10px
       .bar-nav-left

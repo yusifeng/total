@@ -1,22 +1,24 @@
 <template>
 <div class="echart-wrapper container">
+
   <div class="echart-item">
-    <img src="./e1.png" alt="" class="e1">
-    <p class="e-desc">客服技术团队占比</p>
+    <img src="./e1.png" alt="" class="e1" width="298">
   </div>
+
   <div class="echart-item">
     <div class="content bgco1">· 用前沿科学技术，为事业注入活力</div>
     <div class="content bgco2">· 解放重复、繁琐的人力</div>
     <div class="content bgco3">· 放大人之创造性，有效运作，高效工作</div>
   </div>
+
   <div class="echart-item">
-    <img src="./e2.png" alt="">
-    <p class="e-desc">销售增长额</p>
+    <img src="./e2.png" alt="" width="298">
   </div>
+
   <div class="echart-item">
-    <img src="./e3.png" alt="">
-    <p class="e-desc">团队规模</p>
+    <img src="./e3.png" alt="" width="298">
   </div>
+  
 </div>
 </template>
 
@@ -64,7 +66,7 @@
         border-radius 5px
         color $ffffff
         margin-left 100px
-        margin-top 20px
+        margin-top 10px
       .bgco1
         background-color $color-common-theme-sub-color
       .bgco2

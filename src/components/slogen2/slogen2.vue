@@ -1,5 +1,6 @@
 <template>
   <div class="slogen2">
+
     <div class="special">
       [<span class="text">专业</span>]
       <span class="dot">·</span>
@@ -7,10 +8,11 @@
       <span class="dot">·</span>
       [<span class="text">事业</span>]
     </div>
+
     <div class="logo"></div>
-    <div class="slogen-en">
-      FOR THE DREAM, ALL THE GLORY.
-    </div>
+
+    <div class="slogen-en">FOR THE DREAM, ALL THE GLORY.</div>
+    
   </div>
 </template>
 

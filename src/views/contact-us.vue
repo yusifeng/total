@@ -19,8 +19,8 @@
         </div>
       </div>
       <div class="img-wrapper">
-        <img src="./map.png" class="img">
-        <div class="ripple" :style="item.locatePosition" v-for="(item, index) in dataList">
+        <img src="../common/imgs/map2.png" class="img">
+        <div class="ripple" :style="item.locatePosition" v-for="(item) in dataList" :key="item">
             <div class="locate" :style="item.locateNamePosition">{{item.locateName}}</div>
             <div class="core"></div>
             <div class="dot1 dot"></div>
@@ -30,10 +30,12 @@
       </div>
     </div>
     <div class="container contact-way">
-      <div class="way-item" v-for="(item, index) in contactList">
+      <div class="way-item" v-for="(item) in contactList" :key="item">
+
          <h3 class="title">{{item.title}}</h3>
-         <p class="content" v-for="(i) in item.content">{{i}}</p>
+         <p class="content" v-for="(i) in item.content" :key="i">{{i}}</p>
          <span class="icon iconfont" :class="item.icon"></span>
+         
       </div>
     </div>
   </div>
@@ -46,56 +48,56 @@ export default {
         {
           locateName: '华北公司',
           locatePosition: {
-            top: '267px',
-            left: '641px'
+            top: '250px',
+            left: '617px'
           },
           locateNamePosition: {
             top: '10px',
-            left:'34px'
+            left:'20px'
           }
         },
         {
           locateName: '华西公司',
           locatePosition: {
-            top: '490px',
-            left: '450px'
+            top: '435px',
+            left: '428px'
           },
           locateNamePosition: {
             top: '10px',
-            left:'34px'
+            left:'20px'
           }
         },
         {
           locateName: '华中公司',
           locatePosition: {
-            top: '490px',
-            left: '700px'
+            top: '420px',
+            left: '650px'
           },
           locateNamePosition: {
             top: '10px',
-            left:'34px'
+            left:'20px'
           }
         },
         {
           locateName: '华西公司',
           locatePosition: {
-            top: '530px',
-            left: '650px'
+            top: '440px',
+            left: '569px'
           },
           locateNamePosition: {
             top: '70px',
-            left:'34px'
+            left:'20px'
           }
         },
         {
           locateName: '华东公司',
           locatePosition: {
-            top: '485px',
-            left: '780px'
+            top: '450px',
+            left: '700px'
           },
           locateNamePosition: {
             top: '70px',
-            left:'34px'
+            left:'20px'
           }
         }
       ],
@@ -144,7 +146,7 @@ export default {
     .locate-wrapper
       width 100%
       height 1200px
-      background-image url('bg2.jpg')
+      background-image url('../common/imgs/bg2.jpg')
       .title-wrapper
         text-align center
         width 100%
@@ -192,15 +194,16 @@ export default {
         border-radius 50%
         .locate
           position absolute
-          color $color-advantage-four-active-color
+          color $666666
+          font-weight 700
         .core
           position absolute
           left 0
           top 0
           bottom 0
           right 0
-          width 10px
-          height 10px
+          width 30px
+          height 30px
           margin auto
           background-color $color-advantage-four-active-color
           border-radius 50%

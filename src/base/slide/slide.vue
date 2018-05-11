@@ -10,7 +10,7 @@
       <div class="swiper-slide slide2">
         <img src="./slide2.png" width="100%">
         <div class="container slide-content">          
-          <img src="./slide2-content.png" class="slogen animated slideInUp" width="230px" style="bottom:132px">
+          <img src="./slide2-content.png" class="slogen animated slideInUp slogen-img" style="top:40%">
         </div>
       </div>
     </div>
@@ -31,24 +31,15 @@
       this.swiper = new Swiper(this.$refs.swiperContainer, {
         effect: 'fade',
         loop: true,
-        slideShadows: true,
-        shadow: true,
-        zoom: true,
+        autoplay: true,
         pagination: {
           el: '.swiper-pagination',
           dynamicBullets: true,
           clickable :true,
         },
-        autoplay: true
+        
       })
     },
-    methods: {
-      prevent(e) {
-        console.log(1)
-        e.stopPropagation()
-      }
-    },
-
     components: {
       Slogen,
     }
@@ -66,8 +57,8 @@
         .slogen
           display none
           position absolute
-          bottom 120px
-          left 200px
+          top 32%
+          left 14%
         .animated 
           -webkit-animation-duration: .1s;
           animation-duration .7s
@@ -82,6 +73,8 @@
           left 50%
           margin-left -600px
           height 100%
+        .slogen-img
+          width 17vw
       .swiper-slide-active > .container > .slogen
         display inline-block
 

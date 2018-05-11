@@ -20,8 +20,8 @@
 
     <div class="container core-team">
       <div class="clearfix">
-        <div class="core-ceo">
 
+        <div class="core-ceo">
           <img src="./ts-st-ceo.png" alt="" class="img" height="420px">
           <div class="title-en">OUR TEAM</div>
           <div class="title-zh">核心团队</div>
@@ -33,7 +33,6 @@
           <p class="content">沃淘的最高目标清晰而唯一：</p>
           <p class="content">为细分市场创造不可替代的价值服务；</p>
           <p class="content">让伙伴一起激情畅想我们的事业成就。</p>
-          <!-- <p class="right-quo">"</p> -->
         </div>
 
         <div class="core-cmo">
@@ -58,12 +57,15 @@
           <p class="motto">6年的行业钻研到市场沉淀，用开放的心态与一切美好的书屋产生链接。</p>
           <p class="content">曾筹建团队在行业领头企业的全国市场，取得让友商敬重的销售业绩，是真正懂得"技术和商业"如何契合的专家级销售顾问。</p>
         </div>
+
       </div>
+      
     </div>
 
     <div class="container company-tree">
-      <img src="./team-struct.png" alt="" width="90%">
+      <img src="./team-struct.png" alt="">
     </div>
+
   </div>
 </template>
 
@@ -110,7 +112,7 @@ export default {
         .te-st-l
           position absolute
           top 80px
-          width 220px
+          width 280px
           right 30px
       .slide-mid
         position relative
@@ -212,5 +214,6 @@ export default {
       img
         display block
         margin 0 auto
+        width 1060px 
 </style>
 

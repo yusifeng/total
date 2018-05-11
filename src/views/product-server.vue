@@ -1,7 +1,6 @@
 <template>
   <div class="product-server-wrapper">
-    <single-slide class="single-slide" :bannerMsg="bannerMsg">
-    </single-slide>
+    <single-slide class="single-slide" :bannerMsg="bannerMsg"></single-slide>
     <five-server></five-server>
   </div>
 </template>

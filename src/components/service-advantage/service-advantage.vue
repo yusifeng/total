@@ -2,14 +2,14 @@
   <div class="service-advantage-wrapper">
     <div class="container">
       <div class="left">
-        <div class="item" v-for="item in listLeft">
+        <div class="item" v-for="item in listLeft" :key="item">
           <arrow-icon class="arrow">{{item.title}}</arrow-icon>
           {{item.desc}}
         </div>
 
       </div>
       <div class="right">
-        <div class="item" v-for="item in listRight">
+        <div class="item" v-for="item in listRight" :key="item">
           <arrow-icon class="arrow">{{item.title}}</arrow-icon>
           {{item.desc}}
         </div>
@@ -104,10 +104,6 @@ export default {
           .arrow
             position absolute
             top 4px
-            left 0
-
-
-
-        
+            left 0        
 </style>
 

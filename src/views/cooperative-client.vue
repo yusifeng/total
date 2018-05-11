@@ -1,19 +1,33 @@
 <template>
   <div class="inc-precess-wrapper">
-    <single-slide class="single-slide" :bannerMsg="bannerMsg">
-    </single-slide>
+    <single-slide class="single-slide" :bannerMsg="bannerMsg"></single-slide>
+
     <certificate class="certificate"></certificate>
+
     <model-client class="model-client"></model-client>
+
     <div class="client-bar"> 
       <ul class="client-bar-wrapper container">
-        <li v-for="(item, index) in clientList" :class="{active: currentIndex === index}" @click="selectItem(index)">
+
+        <li v-for="(item, index) in clientList" :class="{active: currentIndex === index}" @click="selectItem(index)" :key="item">
           <span class="icon iconfont" :class="item.icon"></span>
           <span class="title" >{{item.title}}</span>
         </li>
+
+        <span class="shadow1" ref="shadow"></span>
       </ul>
     </div>
+
+      <!-- <component :is="currentComponent"></component> -->
+    <div class="can-see">
+      <div class="client-wrapper" ref="clientwrapper"> 
+        <client-fin class="client-item"></client-fin>
+        <client-sale class="client-item"></client-sale>
+        <client-internet class="client-item"></client-internet>
+      </div>
+    </div>
     
-    <component :is="currentComponent"></component>
+
   </div>
 </template>
 
@@ -50,6 +64,8 @@ export default {
   methods: {
     selectItem(index) {
       this.currentIndex = index
+      this.$refs.shadow.style.left = (index * 33.3) + '%'
+      this.$refs.clientwrapper.style.marginLeft = `-${100 * index}vw`
     }
   },
   computed: {
@@ -106,9 +122,28 @@ export default {
             vertical-align middle
             letter-spacing 3px
             cursor pointer
-        .active
-          background-color rgba(0, 0, 0, .1)
+        .shadow1
+          position absolute
+          top 0
+          left 0
+          width 33.3%
+          height 100%
+          background-color rgba(0, 0, 0,  .1)
+          transition left 400ms linear
     .model-client
       margin-bottom 30px
+    .can-see
+      width 100vw
+      height 410px
+      overflow hidden
+      .client-wrapper
+        // position absolute
+        height 410px
+        width 300vw
+        font-size 0
+        margin-left -0vw
+        transition margin-left 400ms linear
+        .client-item
+          display inline-block
 </style>
 

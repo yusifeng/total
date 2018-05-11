@@ -3,21 +3,25 @@
     
     <single-slide class="single-slide" :bannerMsg="bannerMsg">
       <div class="single-slide-content" slot="word">
+
         <span class="quo-left">“</span>
-        <p class="content">好风凭借力,送我上青云.借力中国经济高速发展趋势,我们坚定的以"价值,共生,共荣"为使命,做值得客户信赖的电信业务服务商.</p>
+        <p class="content">好风凭借力,送我上青云。借力中国经济高速发展趋势,我们坚定的以"价值,共生,共荣"为使命,做值得客户信赖的电信业务服务商。</p>
         <span class="quo-right">”</span>
+
       </div>
     </single-slide>
 
     <series-row-item :list="fiveDescriptionList" @click="selectItem" :color="0"></series-row-item>
 
-    <div class="desc-background" v-for="(item, index) in fiveDescriptionList" :class="{active: index === currentIndex}">
+    <div class="desc-background" v-for="(item, index) in fiveDescriptionList" :class="{active: index === currentIndex}" :key="item">  
       <div class="container">
+        
         <h3 class="title">{{item.title}}</h3>
         <p class="content">{{item.content}}</p>
         <div class="icon-wrapper">
           <i class="iconfont" :class="item.icon"></i>
         </div>
+        
       </div>
     </div>
     

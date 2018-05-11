@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="container">
+
       <div class="left">
         <h3 class="title">50条同时运行的国内短信通道</h3>
         <ul>
@@ -12,6 +13,7 @@
           <li>沃淘通道完美支持虚拟运营商号段。</li>
         </ul>
       </div>
+
       <div class="right">
         <h3 class="title">10余条同时运行的国际短信通道</h3>
         <ul>
@@ -20,6 +22,7 @@
           <li>与全球超过<span>1000</span>个运营商建立有商业合作关系， 支持全球语言。</li>
         </ul>
       </div>
+      
     </div>
   </div>
 </template>
@@ -32,7 +35,7 @@
     .container
       font-size 0
       box-sizing border-box
-      padding 40px 0px 40px 30px
+      padding 40px 0 40px 0
       .left
         display inline-block
         padding 0px 55px 0 79px

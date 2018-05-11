@@ -4,13 +4,15 @@
 
     <series-row-item :list="fiveDescriptionList" @click="selectItem" :color="1"></series-row-item>
 
-    <div class="desc-background" v-for="(item, index) in fiveDescriptionList" :class="{active: index === currentIndex}">
+    <div class="desc-background" v-for="(item, index) in fiveDescriptionList" :class="{active: index === currentIndex}" :key="item">
       <div class="container">
+
         <h3 class="title">{{item.title}}</h3>
         <span class="line">/</span>
         <span class="title-en">{{item.titleEn}}</span>
         <p class="content">{{item.content}}</p>
         <div class="down-icon"></div>
+        
       </div>
     </div>
 
@@ -108,14 +110,14 @@ export default {
           margin-bottom 30px
         .title-en
           position absolute
-          left 240px
-          top 45px
+          left 248px
+          top 47px
           font-size $mode-subtitle-en-size
           color $color-common-theme-sub-color
         .line
           position absolute
-          left 230px
-          top 24px
+          left 232px
+          top 27px
           font-size $mode-skewline-size
           height 32px
         .down-icon

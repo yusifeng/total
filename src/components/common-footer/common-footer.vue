@@ -6,28 +6,28 @@
           <div class="footer-website-item">
             <h3>公司历程</h3>
             <ul>
-              <li><a href="./inc-precess" target="_blank">沃淘概况</a></li>
-              <li><a href="./inc-precess" target="_blank">未来展望</a></li>
-              <li><a href="./inc-precess" target="_blank">经营理念</a></li>
-              <li><a href="./inc-precess" target="_blank">团队架构</a></li>
+              <li><a href="http://www.wotall.com/inc-precess/" target="_blank">沃淘概况</a></li>
+              <li><a href="http://www.wotall.com/inc-precess/" target="_blank">未来展望</a></li>
+              <li><a href="http://www.wotall.com/inc-precess/" target="_blank">经营理念</a></li>
+              <li><a href="http://www.wotall.com/inc-precess/" target="_blank">团队架构</a></li>
             </ul>
           </div>
           <div class="footer-website-item">
             <h3>产品与服务</h3>
             <ul>
-              <li><a href="./prod-server" target="_blank">短信平台</a></li>
-              <li><a href="./prod-server" target="_blank">投放建议</a></li>
-              <li><a href="./prod-server" target="_blank">短信群发</a></li>
-              <li><a href="./prod-server" target="_blank">专号服务</a></li>
-              <li><a href="./prod-server" target="_blank">数据报告</a></li>
+              <li><a href="http://www.wotall.com/prod-server/" target="_blank">短信平台</a></li>
+              <li><a href="http://www.wotall.com/prod-server/" target="_blank">投放建议</a></li>
+              <li><a href="http://www.wotall.com/prod-server/" target="_blank">短信群发</a></li>
+              <li><a href="http://www.wotall.com/prod-server/" target="_blank">专号服务</a></li>
+              <li><a href="http://www.wotall.com/prod-server/" target="_blank">数据报告</a></li>
             </ul>
           </div>
           <div class="footer-website-item">
             <h3>业绩成果</h3>
             <ul>
-              <li><a href="./performance-results" target="_blank">销售额增长</a></li>
-              <li><a href="./performance-results" target="_blank">团队规模</a></li>
-              <li><a href="./performance-results" target="_blank">技术客服团队占比 </a></li>
+              <li><a href="http://www.wotall.com/performance-results/" target="_blank">销售额增长</a></li>
+              <li><a href="http://www.wotall.com/performance-results/" target="_blank">团队规模</a></li>
+              <li><a href="http://www.wotall.com/performance-results/" target="_blank">技术客服团队占比 </a></li>
             </ul>
           </div>
           <div class="footer-website-item special">
@@ -51,8 +51,8 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <p><span>Copyright ©2013 - 2016  上海沃淘信息科技有限公司 </span> <img src="./batb.png" alt=""><a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202007449" class="hwba"> 沪公网安备 31011202007449号</a></p>
-      <p>咨询热线：4006665168</p>
+      <p><span>Copyright ©2013 - 2016  上海沃淘信息科技有限公司 </span><span>咨询热线：4006665168  </span></p>
+      <p><img src="./police.png" alt=""><a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202007449" class="hwba"> 沪公网安备 31011202007449号</a>  <a target="_blank" href="http://www.miitbeian.gov.cn">沪ICP备 16006747</a></p>
     </div>
   </div>
 </template>
@@ -107,12 +107,11 @@ export default {
         span
         img
           vertical-align middle
-      .hwba
+      a
         color $color-footer-dd-color
         font-size $common-footer-copyright-size
         vertical-align bottom
         &:hover
           color $color-common-theme-hover-color
-
 </style>
 
